@@ -1,0 +1,108 @@
+<style>
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .help-block {
+        font-size: 0.9em;
+        color: #555;
+    }
+    .input-xlarge {
+        width: 100%;
+        max-width: 500px;
+    }
+</style>
+
+<form class="form-horizontal form-complex">
+    <!-- URL Field -->
+    <div class="form-group">
+        <label class="control-label" for="thinking-soc-url">URL</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" name="action.ThinkingSOC.param.url" id="thinking-soc-url" placeholder="http://example.com/webhook"/>
+            <span class="help-block">
+                Enter the full URL of your API endpoint where the webhook data will be sent.<br>
+                <strong>Example:</strong> http://example.com/webhook
+            </span>
+        </div>
+    </div>
+
+    <!-- Username Field -->
+    <div class="form-group">
+        <label class="control-label" for="thinking-soc-username">Username</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" name="action.ThinkingSOC.param.username" id="thinking-soc-username" placeholder="Enter username"/>
+            <span class="help-block">
+                Optional: Provide the username for authentication if your API requires it.<br>
+                If left blank, the webhook will be sent without authentication.
+            </span>
+        </div>
+    </div>
+
+    <!-- Password Field -->
+    <div class="form-group">
+        <label class="control-label" for="thinking-soc-password">Password</label>
+        <div class="controls">
+            <input type="password" class="input-xlarge" name="action.ThinkingSOC.param.password" id="thinking-soc-password" placeholder="Enter password"/>
+            <span class="help-block">
+                Optional: Provide the password for authentication if your API requires it.<br>
+                If left blank, the webhook will be sent without authentication.
+            </span>
+        </div>
+    </div>
+
+    <!-- Description Field -->
+    <div class="form-group">
+        <label class="control-label" for="thinking-soc-description">Description</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" name="action.ThinkingSOC.param.description" id="thinking-soc-description" placeholder="Short description of the alert or event..."/>
+            <span class="help-block">
+                Provide a short description of the alert or event.<br>
+                <strong>Example:</strong> "Suspicious login attempt from an unknown IP."
+            </span>
+        </div>
+    </div>
+
+    <!-- Severity Field -->
+    <div class="form-group">
+        <label class="control-label" for="thinking-soc-severity">Severity</label>
+        <div class="controls">
+            <select name="action.ThinkingSOC.param.severity" id="thinking-soc-severity" class="input-xlarge">
+                <option value="">(None)</option>
+                <option value="info">Info</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="critical">Critical</option>
+            </select>
+            <span class="help-block">
+                Select the severity level that best describes the alert.<br>
+                <strong>Example:</strong> "Critical" for events that require immediate attention.
+            </span>
+        </div>
+    </div>
+
+    <!-- MITRE Tactics Field -->
+    <div class="form-group">
+        <label class="control-label" for="thinking-soc-mitre-tactics">MITRE Tactics</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" name="action.ThinkingSOC.param.mitre_tactics" id="thinking-soc-mitre-tactics" placeholder="Enter MITRE Tactics (Optional)"/>
+            <span class="help-block">
+                Optional: Enter one or more MITRE Tactics associated with this alert.<br>
+                <strong>Example:</strong> "Initial Access, Execution"<br>
+                Use a comma to separate multiple tactics.
+            </span>
+        </div>
+    </div>
+
+    <!-- MITRE Techniques Field -->
+    <div class="form-group">
+        <label class="control-label" for="thinking-soc-mitre-techniques">MITRE Techniques</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" name="action.ThinkingSOC.param.mitre_techniques" id="thinking-soc-mitre-techniques" placeholder="Enter MITRE Techniques (Optional)"/>
+            <span class="help-block">
+                Optional: Enter one or more MITRE Techniques associated with this alert.<br>
+                <strong>Example:</strong> "Spearphishing Attachment, Credential Dumping"<br>
+                Use a comma to separate multiple techniques.
+            </span>
+        </div>
+    </div>
+</form>
